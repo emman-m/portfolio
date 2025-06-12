@@ -4,6 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Resource Hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    
     <!-- Primary Meta Tags -->
     <title>Emmanuel M. - Full Stack Developer</title>
     <meta name="title" content="Emmanuel M. - Full Stack Developer">
@@ -43,13 +50,16 @@
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="manifest" href="site.webmanifest">
 
-    <!-- Preload Critical Resources -->
+    <!-- Critical CSS -->
     <link rel="stylesheet" href="src/output.css?v1.0.1">
-    <link rel="preload" href="assets/fontawesome/css/all.min.css" as="style">
-    <link rel="preload" href="styles.css?v1.0.1" as="style">
-    <link rel="preload" href="script.js" as="script">
-    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="styles.css?v1.0.1">
+    
+    <!-- Non-critical CSS -->
+    <link rel="preload" href="assets/fontawesome/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="assets/fontawesome/css/all.min.css"></noscript>
+    
+    <link rel="preload" href="styles.css?v1.0.1" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="styles.css?v1.0.1"></noscript>
+    
     <!-- Lightbox2 CSS -->
     <link href="node_modules/lightbox2/dist/css/lightbox.min.css" rel="stylesheet">
     <!-- jQuery -->
@@ -98,16 +108,31 @@
             <div class="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="assets/images/landing-page/carousel-computer-table.jpg"
-                            alt="Coding workspace with laptop" loading="eager" class="w-full h-full object-cover">
+                        <picture>
+                            <source srcset="assets/images/landing-page/carousel-computer-table.webp" type="image/webp">
+                            <img src="assets/images/landing-page/carousel-computer-table.jpg"
+                                alt="Coding workspace with laptop" 
+                                loading="eager" 
+                                class="w-full h-full object-cover">
+                        </picture>
                     </div>
                     <div class="carousel-item">
-                        <img src="assets/images/landing-page/carousel-computer.jpg" alt="Code editor with programming"
-                            loading="lazy" class="w-full h-full object-cover">
+                        <picture>
+                            <source srcset="assets/images/landing-page/carousel-computer.webp" type="image/webp">
+                            <img src="assets/images/landing-page/carousel-computer.jpg" 
+                                alt="Code editor with programming"
+                                loading="lazy" 
+                                class="w-full h-full object-cover">
+                        </picture>
                     </div>
                     <div class="carousel-item">
-                        <img src="assets/images/landing-page/carousel-code.jpg" alt="Modern development environment"
-                            loading="lazy" class="w-full h-full object-cover">
+                        <picture>
+                            <source srcset="assets/images/landing-page/carousel-code.webp" type="image/webp">
+                            <img src="assets/images/landing-page/carousel-code.jpg" 
+                                alt="Modern development environment"
+                                loading="lazy" 
+                                class="w-full h-full object-cover">
+                        </picture>
                     </div>
                 </div>
                 <div class="carousel-overlay"></div>
@@ -284,17 +309,25 @@
                                 <div class="project-carousel h-96">
                                     <div class="carousel-inner flex transition-transform duration-300 h-full">
                                         <div class="carousel-item w-full flex-shrink-0 h-full">
-                                            <a href="assets/images/todo/todo-app-initial-display.png" data-lightbox="todo-app" data-title="Todo App Initial Display">
-                                                <img src="assets/images/todo/todo-app-initial-display.png"
-                                                    alt="Todo App Initial Display"
-                                                    class="w-full h-full object-cover rounded-lg cursor-pointer hover:opacity-90 transition-opacity">
+                                            <a href="assets/images/todo/todo-app-initial-display.webp" data-lightbox="todo-app" data-title="Todo App Initial Display">
+                                                <picture>
+                                                    <source srcset="assets/images/todo/todo-app-initial-display.webp" type="image/webp">
+                                                    <img src="assets/images/todo/todo-app-initial-display.png"
+                                                        alt="Todo App Initial Display"
+                                                        loading="lazy"
+                                                        class="w-full h-full object-cover rounded-lg cursor-pointer hover:opacity-90 transition-opacity">
+                                                </picture>
                                             </a>
                                         </div>
                                         <div class="carousel-item w-full flex-shrink-0 h-full">
-                                            <a href="assets/images/todo/todo-app-add-task.png" data-lightbox="todo-app" data-title="Todo App Add Task">
-                                                <img src="assets/images/todo/todo-app-add-task.png" 
-                                                    alt="Todo App Add Task"
-                                                    class="w-full h-full object-cover rounded-lg cursor-pointer hover:opacity-90 transition-opacity">
+                                            <a href="assets/images/todo/todo-app-add-task.webp" data-lightbox="todo-app" data-title="Todo App Add Task">
+                                                <picture>
+                                                    <source srcset="assets/images/todo/todo-app-add-task.webp" type="image/webp">
+                                                    <img src="assets/images/todo/todo-app-add-task.png" 
+                                                        alt="Todo App Add Task"
+                                                        loading="lazy"
+                                                        class="w-full h-full object-cover rounded-lg cursor-pointer hover:opacity-90 transition-opacity">
+                                                </picture>
                                             </a>
                                         </div>
                                     </div>
@@ -349,24 +382,36 @@
                                 <div class="project-carousel h-96">
                                     <div class="carousel-inner flex transition-transform duration-300 h-full">
                                         <div class="carousel-item w-full flex-shrink-0 h-full">
-                                            <a href="assets/images/hotel-website/hotel-landing-page.png" data-lightbox="hotel-website" data-title="Hotel Landing Page">
-                                                <img src="assets/images/hotel-website/hotel-landing-page.png"
-                                                    alt="Hotel Landing Page"
-                                                    class="w-full h-full object-cover rounded-lg cursor-pointer hover:opacity-90 transition-opacity">
+                                            <a href="assets/images/hotel-website/hotel-landing-page.webp" data-lightbox="hotel-website" data-title="Hotel Landing Page">
+                                                <picture>
+                                                    <source srcset="assets/images/hotel-website/hotel-landing-page.webp" type="image/webp">
+                                                    <img src="assets/images/hotel-website/hotel-landing-page.png"
+                                                        alt="Hotel Landing Page"
+                                                        loading="lazy"
+                                                        class="w-full h-full object-cover rounded-lg cursor-pointer hover:opacity-90 transition-opacity">
+                                                </picture>
                                             </a>
                                         </div>
                                         <div class="carousel-item w-full flex-shrink-0 h-full">
-                                            <a href="assets/images/hotel-website/hotel-rooms.png" data-lightbox="hotel-website" data-title="Hotel Rooms">
-                                                <img src="assets/images/hotel-website/hotel-rooms.png"
-                                                    alt="Hotel Rooms"
-                                                    class="w-full h-full object-cover rounded-lg cursor-pointer hover:opacity-90 transition-opacity">
+                                            <a href="assets/images/hotel-website/hotel-rooms.webp" data-lightbox="hotel-website" data-title="Hotel Rooms">
+                                                <picture>
+                                                    <source srcset="assets/images/hotel-website/hotel-rooms.webp" type="image/webp">
+                                                    <img src="assets/images/hotel-website/hotel-rooms.png"
+                                                        alt="Hotel Rooms"
+                                                        loading="lazy"
+                                                        class="w-full h-full object-cover rounded-lg cursor-pointer hover:opacity-90 transition-opacity">
+                                                </picture>
                                             </a>
                                         </div>
                                         <div class="carousel-item w-full flex-shrink-0 h-full">
-                                            <a href="assets/images/hotel-website/hotel-book-now.png" data-lightbox="hotel-website" data-title="Hotel Book Now">
-                                                <img src="assets/images/hotel-website/hotel-book-now.png"
-                                                    alt="Hotel Book Now"
-                                                    class="w-full h-full object-cover rounded-lg cursor-pointer hover:opacity-90 transition-opacity">
+                                            <a href="assets/images/hotel-website/hotel-book-now.webp" data-lightbox="hotel-website" data-title="Hotel Book Now">
+                                                <picture>
+                                                    <source srcset="assets/images/hotel-website/hotel-book-now.webp" type="image/webp">
+                                                    <img src="assets/images/hotel-website/hotel-book-now.png"
+                                                        alt="Hotel Book Now"
+                                                        loading="lazy"
+                                                        class="w-full h-full object-cover rounded-lg cursor-pointer hover:opacity-90 transition-opacity">
+                                                </picture>
                                             </a>
                                         </div>
                                     </div>
@@ -418,31 +463,47 @@
                                 <div class="project-carousel h-96">
                                     <div class="carousel-inner flex transition-transform duration-300 h-full">
                                         <div class="carousel-item w-full flex-shrink-0 h-full">
-                                            <a href="assets/images/hrms/hrms_dashboard.png" data-lightbox="hrms" data-title="HRMS Dashboard">
-                                                <img src="assets/images/hrms/hrms_dashboard.png"
-                                                    alt="HRMS Dashboard"
-                                                    class="w-full h-full object-cover rounded-lg cursor-pointer hover:opacity-90 transition-opacity">
+                                            <a href="assets/images/hrms/hrms_dashboard.webp" data-lightbox="hrms" data-title="HRMS Dashboard">
+                                                <picture>
+                                                    <source srcset="assets/images/hrms/hrms_dashboard.webp" type="image/webp">
+                                                    <img src="assets/images/hrms/hrms_dashboard.png"
+                                                        alt="HRMS Dashboard"
+                                                        loading="lazy"
+                                                        class="w-full h-full object-cover rounded-lg cursor-pointer hover:opacity-90 transition-opacity">
+                                                </picture>
                                             </a>
                                         </div>
                                         <div class="carousel-item w-full flex-shrink-0 h-full">
-                                            <a href="assets/images/hrms/hrms_users.png" data-lightbox="hrms" data-title="HRMS Users">
-                                                <img src="assets/images/hrms/hrms_users.png"
-                                                    alt="HRMS Users"
-                                                    class="w-full h-full object-cover rounded-lg cursor-pointer hover:opacity-90 transition-opacity">
+                                            <a href="assets/images/hrms/hrms_users.webp" data-lightbox="hrms" data-title="HRMS Users">
+                                                <picture>
+                                                    <source srcset="assets/images/hrms/hrms_users.webp" type="image/webp">
+                                                    <img src="assets/images/hrms/hrms_users.png"
+                                                        alt="HRMS Users"
+                                                        loading="lazy"
+                                                        class="w-full h-full object-cover rounded-lg cursor-pointer hover:opacity-90 transition-opacity">
+                                                </picture>
                                             </a>
                                         </div>
                                         <div class="carousel-item w-full flex-shrink-0 h-full">
-                                            <a href="assets/images/hrms/hrms_employees_info.png" data-lightbox="hrms" data-title="HRMS Employees Info">
-                                                <img src="assets/images/hrms/hrms_employees_info.png"
-                                                    alt="HRMS Employees Info"
-                                                    class="w-full h-full object-cover rounded-lg cursor-pointer hover:opacity-90 transition-opacity">
+                                            <a href="assets/images/hrms/hrms_employees_info.webp" data-lightbox="hrms" data-title="HRMS Employees Info">
+                                                <picture>
+                                                    <source srcset="assets/images/hrms/hrms_employees_info.webp" type="image/webp">
+                                                    <img src="assets/images/hrms/hrms_employees_info.png"
+                                                        alt="HRMS Employees Info"
+                                                        loading="lazy"
+                                                        class="w-full h-full object-cover rounded-lg cursor-pointer hover:opacity-90 transition-opacity">
+                                                </picture>
                                             </a>
                                         </div>
                                         <div class="carousel-item w-full flex-shrink-0 h-full">
-                                            <a href="assets/images/hrms/hrms_printable_info.png" data-lightbox="hrms" data-title="HRMS Printable Info">
-                                                <img src="assets/images/hrms/hrms_printable_info.png"
-                                                    alt="HRMS Printable Info"
-                                                    class="w-full h-full object-cover rounded-lg cursor-pointer hover:opacity-90 transition-opacity">
+                                            <a href="assets/images/hrms/hrms_printable_info.webp" data-lightbox="hrms" data-title="HRMS Printable Info">
+                                                <picture>
+                                                    <source srcset="assets/images/hrms/hrms_printable_info.webp" type="image/webp">
+                                                    <img src="assets/images/hrms/hrms_printable_info.png"
+                                                        alt="HRMS Printable Info"
+                                                        loading="lazy"
+                                                        class="w-full h-full object-cover rounded-lg cursor-pointer hover:opacity-90 transition-opacity">
+                                                </picture>
                                             </a>
                                         </div>
                                     </div>
