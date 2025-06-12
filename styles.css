@@ -52,7 +52,7 @@
 }
 
 .carousel-content {
-    position: relative;
+    /* position: relative; */
     z-index: 2;
     padding: 0 1rem;
 }

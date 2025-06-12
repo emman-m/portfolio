@@ -44,12 +44,10 @@
     <link rel="manifest" href="site.webmanifest">
 
     <!-- Preload Critical Resources -->
-    <link rel="preload" href="src/output.css" as="script">
+    <link rel="stylesheet" href="src/output.css">
     <link rel="preload" href="assets/fontawesome/css/all.min.css" as="style">
     <link rel="preload" href="styles.css" as="style">
     <link rel="preload" href="script.js" as="script">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script type="module" src="tailwind.config.js"></script>
     <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -77,10 +75,10 @@
             <div class="flex justify-between items-center">
                 <a href="#" class="text-2xl font-bold text-white" aria-label="Portfolio Home">Emmanuel</a>
                 <div class="flex items-center space-x-4">
-                    <button id="theme-toggle" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700"
+                    <button id="theme-toggle" class="p-1 px-2 rounded-lg bg-gray-200 dark:bg-gray-700"
                         aria-label="Toggle dark mode">
-                        <i class="fas fa-moon dark:hidden text-gray-800" aria-hidden="true"></i>
-                        <i class="fas fa-sun hidden dark:block text-yellow-300" aria-hidden="true"></i>
+                        <i class="fas fa-moon inline-block dark:hidden text-gray-800" aria-hidden="true"></i>
+                        <i class="fas fa-sun !hidden dark:!inline-block text-yellow-300 text-sm" aria-hidden="true"></i>
                     </button>
                 </div>
             </div>
@@ -255,11 +253,13 @@
                                 </div>
                                 <div class="flex space-x-3">
                                     <a href="https://todo-app.emmanuelmagno.com/"
+                                        target="_blank"
                                         class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
                                         aria-label="View Live Demo">
                                         <i class="fas fa-external-link-alt text-xl"></i>
                                     </a>
                                     <a href="https://github.com/emman-m/todo-app"
+                                        target="_blank"
                                         class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
                                         aria-label="View Source Code">
                                         <i class="fab fa-github text-xl"></i>
@@ -311,12 +311,14 @@
                                         management, and administrative features.</p>
                                 </div>
                                 <div class="flex space-x-3">
-                                    <a href="#"
+                                    <a href="https://hotel-website.emmanuelmagno.com/"
+                                        target="_blank"
                                         class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
                                         aria-label="View Live Demo">
                                         <i class="fas fa-external-link-alt text-xl"></i>
                                     </a>
                                     <a href="https://github.com/emman-m/hotel-website"
+                                        target="_blank"
                                         class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
                                         aria-label="View Source Code">
                                         <i class="fab fa-github text-xl"></i>
@@ -375,6 +377,7 @@
                                 </div>
                                 <div class="flex space-x-3">
                                     <a href="https://github.com/emman-m/hrms"
+                                        target="_blank"
                                         class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
                                         aria-label="View Source Code">
                                         <i class="fab fa-github text-xl"></i>
@@ -436,11 +439,11 @@
     <footer class="light:bg-gray-100 dark:bg-gray-900 py-16" role="contentinfo">
         <div class="container mx-auto px-4">
             <div class="flex justify-center space-x-6">
-                <a href="https://github.com/emman-m" class="text-gray-600 dark:text-gray-300 hover:text-primary"
+                <a href="https://github.com/emman-m" target="_blank" class="text-gray-600 dark:text-gray-300 hover:text-primary"
                     aria-label="GitHub Profile">
                     <i class="fab fa-github text-2xl"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/emmanuel-magno-662372186/"
+                <a href="https://www.linkedin.com/in/emmanuel-magno-662372186/" target="_blank"
                     class="text-gray-600 dark:text-gray-300 hover:text-primary" aria-label="LinkedIn Profile">
                     <i class="fab fa-linkedin text-2xl"></i>
                 </a>
