@@ -19,20 +19,20 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://your-domain.com/">
+    <meta property="og:url" content="https://emmanuelmagno.com/">
     <meta property="og:title" content="Emmanuel M. - Full Stack Developer">
     <meta property="og:description"
         content="Full Stack Developer specializing in Laravel, Vue.js, and modern web technologies. View my portfolio of web development projects and get in touch for collaboration.">
-    <meta property="og:image" content="https://your-domain.com/assets/images/landing-page/carousel-computer-table.jpg">
+    <meta property="og:image" content="https://emmanuelmagno.com/assets/images/landing-page/carousel-code.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://your-domain.com/">
+    <meta property="twitter:url" content="https://emmanuelmagno.com/">
     <meta property="twitter:title" content="Emmanuel M. - Full Stack Developer">
     <meta property="twitter:description"
         content="Full Stack Developer specializing in Laravel, Vue.js, and modern web technologies. View my portfolio of web development projects and get in touch for collaboration.">
     <meta property="twitter:image"
-        content="https://your-domain.com/assets/images/landing-page/carousel-computer-table.jpg">
+        content="https://emmanuelmagno.com/assets/images/landing-page/carousel-code.jpg">
 
     <meta name="theme-color" content="#3B82F6">
 
@@ -50,6 +50,12 @@
     <link rel="preload" href="script.js" as="script">
     <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="styles.css?v1.0.1">
+    <!-- Lightbox2 CSS -->
+    <link href="node_modules/lightbox2/dist/css/lightbox.min.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- Lightbox2 JS -->
+    <script src="node_modules/lightbox2/dist/js/lightbox.min.js"></script>
 </head>
 
 <body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
@@ -60,9 +66,9 @@
     </a>
 
     <!-- Preloader -->
-    <div class="preloader" role="status" aria-label="Loading">
+    <!-- <div class="preloader" role="status" aria-label="Loading">
         <div class="loader"></div>
-    </div>
+    </div> -->
 
     <!-- Scroll to Top Button -->
     <button class="scroll-top" aria-label="Scroll to top">
@@ -278,13 +284,18 @@
                                 <div class="project-carousel h-96">
                                     <div class="carousel-inner flex transition-transform duration-300 h-full">
                                         <div class="carousel-item w-full flex-shrink-0 h-full">
-                                            <img src="assets/images/todo/todo-app-initial-display.png"
-                                                alt="Todo App Initial Display"
-                                                class="w-full h-full object-cover rounded-lg">
+                                            <a href="assets/images/todo/todo-app-initial-display.png" data-lightbox="todo-app" data-title="Todo App Initial Display">
+                                                <img src="assets/images/todo/todo-app-initial-display.png"
+                                                    alt="Todo App Initial Display"
+                                                    class="w-full h-full object-cover rounded-lg cursor-pointer hover:opacity-90 transition-opacity">
+                                            </a>
                                         </div>
                                         <div class="carousel-item w-full flex-shrink-0 h-full">
-                                            <img src="assets/images/todo/todo-app-add-task.png" alt="Todo App Add Task"
-                                                class="w-full h-full object-cover rounded-lg">
+                                            <a href="assets/images/todo/todo-app-add-task.png" data-lightbox="todo-app" data-title="Todo App Add Task">
+                                                <img src="assets/images/todo/todo-app-add-task.png" 
+                                                    alt="Todo App Add Task"
+                                                    class="w-full h-full object-cover rounded-lg cursor-pointer hover:opacity-90 transition-opacity">
+                                            </a>
                                         </div>
                                     </div>
                                     <button
@@ -338,17 +349,25 @@
                                 <div class="project-carousel h-96">
                                     <div class="carousel-inner flex transition-transform duration-300 h-full">
                                         <div class="carousel-item w-full flex-shrink-0 h-full">
-                                            <img src="assets/images/hotel-website/hotel-landing-page.png"
-                                                alt="Todo App Initial Display"
-                                                class="w-full h-full object-cover rounded-lg">
+                                            <a href="assets/images/hotel-website/hotel-landing-page.png" data-lightbox="hotel-website" data-title="Hotel Landing Page">
+                                                <img src="assets/images/hotel-website/hotel-landing-page.png"
+                                                    alt="Hotel Landing Page"
+                                                    class="w-full h-full object-cover rounded-lg cursor-pointer hover:opacity-90 transition-opacity">
+                                            </a>
                                         </div>
                                         <div class="carousel-item w-full flex-shrink-0 h-full">
-                                            <img src="assets/images/hotel-website/hotel-rooms.png"
-                                                alt="Todo App Add Task" class="w-full h-full object-cover rounded-lg">
+                                            <a href="assets/images/hotel-website/hotel-rooms.png" data-lightbox="hotel-website" data-title="Hotel Rooms">
+                                                <img src="assets/images/hotel-website/hotel-rooms.png"
+                                                    alt="Hotel Rooms"
+                                                    class="w-full h-full object-cover rounded-lg cursor-pointer hover:opacity-90 transition-opacity">
+                                            </a>
                                         </div>
                                         <div class="carousel-item w-full flex-shrink-0 h-full">
-                                            <img src="assets/images/hotel-website/hotel-book-now.png"
-                                                alt="Todo App Add Task" class="w-full h-full object-cover rounded-lg">
+                                            <a href="assets/images/hotel-website/hotel-book-now.png" data-lightbox="hotel-website" data-title="Hotel Book Now">
+                                                <img src="assets/images/hotel-website/hotel-book-now.png"
+                                                    alt="Hotel Book Now"
+                                                    class="w-full h-full object-cover rounded-lg cursor-pointer hover:opacity-90 transition-opacity">
+                                            </a>
                                         </div>
                                     </div>
                                     <button
@@ -399,20 +418,32 @@
                                 <div class="project-carousel h-96">
                                     <div class="carousel-inner flex transition-transform duration-300 h-full">
                                         <div class="carousel-item w-full flex-shrink-0 h-full">
-                                            <img src="assets/images/hrms/hrms_dashboard.png" alt="image"
-                                                class="w-full h-full object-cover rounded-lg">
+                                            <a href="assets/images/hrms/hrms_dashboard.png" data-lightbox="hrms" data-title="HRMS Dashboard">
+                                                <img src="assets/images/hrms/hrms_dashboard.png"
+                                                    alt="HRMS Dashboard"
+                                                    class="w-full h-full object-cover rounded-lg cursor-pointer hover:opacity-90 transition-opacity">
+                                            </a>
                                         </div>
                                         <div class="carousel-item w-full flex-shrink-0 h-full">
-                                            <img src="assets/images/hrms/hrms_users.png" alt="image"
-                                                class="w-full h-full object-cover rounded-lg">
+                                            <a href="assets/images/hrms/hrms_users.png" data-lightbox="hrms" data-title="HRMS Users">
+                                                <img src="assets/images/hrms/hrms_users.png"
+                                                    alt="HRMS Users"
+                                                    class="w-full h-full object-cover rounded-lg cursor-pointer hover:opacity-90 transition-opacity">
+                                            </a>
                                         </div>
                                         <div class="carousel-item w-full flex-shrink-0 h-full">
-                                            <img src="assets/images/hrms/hrms_employees_info.png" alt="image"
-                                                class="w-full h-full object-cover rounded-lg">
+                                            <a href="assets/images/hrms/hrms_employees_info.png" data-lightbox="hrms" data-title="HRMS Employees Info">
+                                                <img src="assets/images/hrms/hrms_employees_info.png"
+                                                    alt="HRMS Employees Info"
+                                                    class="w-full h-full object-cover rounded-lg cursor-pointer hover:opacity-90 transition-opacity">
+                                            </a>
                                         </div>
                                         <div class="carousel-item w-full flex-shrink-0 h-full">
-                                            <img src="assets/images/hrms/hrms_printable_info.png" alt="image"
-                                                class="w-full h-full object-cover rounded-lg">
+                                            <a href="assets/images/hrms/hrms_printable_info.png" data-lightbox="hrms" data-title="HRMS Printable Info">
+                                                <img src="assets/images/hrms/hrms_printable_info.png"
+                                                    alt="HRMS Printable Info"
+                                                    class="w-full h-full object-cover rounded-lg cursor-pointer hover:opacity-90 transition-opacity">
+                                            </a>
                                         </div>
                                     </div>
                                     <button

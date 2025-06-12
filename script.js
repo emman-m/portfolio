@@ -167,7 +167,21 @@ document.querySelectorAll('.project-carousel').forEach(carousel => {
         showSlide(currentIndex + 1);
     });
 
-    // Ensure inner container takes height of its absolutely positioned children
-    // This might require setting min-height on .project-carousel if images aren't loading immediately
-    // However, h-48 is already set, which should be sufficient.
+});
+
+// Initialize Lightbox2 configuration when DOM is loaded
+$(document).ready(function() {
+    // Lightbox2 configuration
+    lightbox.option({
+        'resizeDuration': 200,
+        'wrapAround': true,
+        'albumLabel': 'Image %1 of %2',
+        'fadeDuration': 300,
+        'imageFadeDuration': 300,
+        'positionFromTop': 100,
+        'maxWidth': 1200,
+        'maxHeight': 800,
+        'disableScrolling': true,
+        'alwaysShowNavOnTouchDevices': true
+    });
 }); 
